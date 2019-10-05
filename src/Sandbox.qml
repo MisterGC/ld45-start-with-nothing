@@ -28,13 +28,14 @@ import Clayground.GameController 1.0
 
 CoordCanvas {
     id: world
-    anchors.fill: parent
+    height: parent.height
+    width: height
     pixelPerUnit: height / world.worldYMax
 
     property bool standaloneApp: false
     readonly property string map: (standaloneApp ? ":/" : ClayLiveLoader.sandboxDir)
                          + "/map.svg"
-    readonly property string resPrefix: world.standaloneApp ? "qrc:/" : ""
+    readonly property string qmlResPrefix: world.standaloneApp ? "qrc:/" : ""
 
     World {
         id: physicsWorld
@@ -105,7 +106,7 @@ CoordCanvas {
 
         onRectangle: {
             let cfg = JSON.parse(description);
-            let compStr = world.resPrefix + cfg["component"];
+            let compStr = world.qmlResPrefix + cfg["component"];
             let comp = Qt.createComponent(compStr);
 
             let obj = null;
@@ -122,7 +123,7 @@ CoordCanvas {
             else {
                 obj = comp.createObject(coordSys, {world: physicsWorld, xWu: x, yWu: y, widthWu: width, heightWu: height, color: "#3e1900"});
                 obj.pixelPerUnit = Qt.binding( _ => {return world.pixelPerUnit;} );
-                if (compStr === (world.resPrefix + "Player.qml")) {
+                if (compStr === (world.qmlResPrefix + "Player.qml")) {
                     player = obj;
                     player.color = "#d45500";
                     world.observedItem = player;
@@ -136,8 +137,8 @@ CoordCanvas {
 
     SheetOfMusic {
         id: theSheet
-        width: parent.width * .95
-        height: .1 * parent.height
+        width: parent.width * .5
+        height: .05 * parent.height
         anchors {
            top: parent.top
            topMargin: height * .1

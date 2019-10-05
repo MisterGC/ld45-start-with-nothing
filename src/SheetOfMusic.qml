@@ -21,20 +21,36 @@
  *
  */
 import QtQuick 2.12
+import QtMultimedia 5.12
 
 Rectangle {
     id: theSheet
+
     property var notes: []
+    readonly property string soundPath: (typeof ClayLiveLoader !== 'undefined' ? ClayLiveLoader.sandboxDir + "/sound" : "qrc:")
 
     function pushNote(color) {
         if (notes.length < theGrid.columns) {
             notes.push(color);
             notesChanged();
+            soundFxComp.createObject(theSheet, {source: soundPath + "/" + color + ".wav" });
         }
 
         // TODO Emit that sheet of music is full
     }
 
+    Component {
+        id: soundFxComp
+        SoundEffect {
+            id: sfx
+            Component.onCompleted: {
+                play();
+            }
+            onPlayingChanged: {
+                if (!playing) sfx.destroy();
+            }
+        }
+    }
 
     Grid {
         id: theGrid

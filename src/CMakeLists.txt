@@ -8,21 +8,22 @@ set(CMAKE_AUTOMOC ON)
 find_package(Qt5 COMPONENTS Core Quick REQUIRED)
 
 add_executable (${PROJECT_NAME}
-main.cpp
-main.qml
-Sandbox.qml
-SheetOfMusic.qml
-Sounding.qml
-Player.qml
-Wall.qml
-res.qrc
+    main.cpp
+    main.qml
+    Sandbox.qml
+    SheetOfMusic.qml
+    Sounding.qml
+    Player.qml
+    Wall.qml
+    res.qrc
+    sound/sound.qrc
 )
 
 set_target_properties (${PROJECT_NAME} PROPERTIES
     CXX_STANDARD 11
     CXX_STANDARD_REQUIRED ON
     CXX_EXTENSIONS NO
-    )
+)
 
 target_link_libraries(${PROJECT_NAME}
 PRIVATE
