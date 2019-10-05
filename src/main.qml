@@ -27,5 +27,5 @@ Window {
     visible: true
     visibility: Window.Maximized
     title: qsTr("Empty-Sheet-of-Music")
-    Sandbox { standaloneApp: true; anchors.centerIn: parent }
+    Sandbox { anchors.centerIn: parent }
 }

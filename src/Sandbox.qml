@@ -32,10 +32,8 @@ CoordCanvas {
     width: height
     pixelPerUnit: height / world.worldYMax
 
-    property bool standaloneApp: false
-    readonly property string map: (standaloneApp ? ":/" : ClayLiveLoader.sandboxDir)
-                         + "/map.svg"
-    readonly property string qmlResPrefix: world.standaloneApp ? "qrc:/" : ""
+    property bool standaloneApp: typeof ClayLiveLoader === 'undefined'
+    readonly property string qmlResPrefix: standaloneApp ? "qrc:/" : ""
 
     World {
         id: physicsWorld
@@ -45,6 +43,12 @@ CoordCanvas {
     }
 
     property var player: null
+    onPlayerChanged: {
+       if (player) {
+           gameCtrl.updateXMovement();
+           gameCtrl.updateYMovement();
+       }
+    }
 
     Keys.forwardTo: gameCtrl
     GameController {
@@ -54,12 +58,15 @@ CoordCanvas {
             selectKeyboard(Qt.Key_Up, Qt.Key_Down, Qt.Key_Left, Qt.Key_Right, Qt.Key_A, Qt.Key_S);
         }
 
-        onAxisXChanged: {
+        onAxisXChanged: updateXMovement()
+        function updateXMovement() {
             if (axisX > 0) player.moveRight();
             else if (axisX < 0) player.moveLeft();
             else { player.stopLeft(); player.stopRight();}
         }
-        onAxisYChanged: {
+
+        onAxisYChanged: updateYMovement()
+        function updateYMovement() {
             if (axisY > 0) player.moveUp();
             else if (axisY < 0) player.moveDown();
             else { player.stopUp(); player.stopDown();}
@@ -92,7 +99,12 @@ CoordCanvas {
         id: theSvgInspector
         property var objs: []
 
-        Component.onCompleted: setSource(world.map)
+        property string map: ""
+        property string spawnLocation: "south"
+        readonly property string _mapPath: (world.standaloneApp ? ":/" : ClayLiveLoader.sandboxDir)
+                                      + "/" + map + ".svg"
+        on_MapPathChanged: { if (map.length > 0) setSource(_mapPath); }
+        Component.onCompleted: map = "map1"
 
         onBegin: {
             world.viewPortCenterWuX = 0;
@@ -111,28 +123,31 @@ CoordCanvas {
 
             let obj = null;
             let hasNoPhysics = compStr.includes("Sounding");
-            if (hasNoPhysics) {
-                obj = comp.createObject(coordSys,
-                                {canvas: world,
-                                 xWu: x,
-                                 yWu: y,
-                                 widthWu: width,
-                                 heightWu: height,
-                                 noteColor: cfg["color"]});
-            }
-            else {
-                obj = comp.createObject(coordSys,
-                                        {world: physicsWorld,
-                                            xWu: x,
-                                            yWu: y,
-                                            widthWu: width,
-                                            heightWu: height});
+            if (hasNoPhysics)
+                obj = comp.createObject(coordSys, {canvas: world, noteColor: cfg["color"]});
+            else
+            {
+                obj = comp.createObject(coordSys,{world: physicsWorld});
                 obj.pixelPerUnit = Qt.binding( _ => {return world.pixelPerUnit;} );
-                if (compStr === (world.qmlResPrefix + "Player.qml")) {
-                    player = obj;
-                    player.color = "#d45500";
-                    world.observedItem = player;
+            }
+
+            obj.xWu = x;
+            obj.yWu = y;
+            obj.widthWu = width;
+            obj.heightWu = height;
+
+            if (obj instanceof Player) {
+                if (cfg["location"] !== theSvgInspector.spawnLocation) {
+                   obj.destroy();
+                   return;
                 }
+                player = obj;
+                player.color = "#d45500";
+                world.observedItem = player;
+            }
+            else if (obj instanceof Entrance) {
+               obj.map = cfg["map"];
+               obj.location = cfg["location"];
             }
 
             objs.push(obj);
@@ -149,6 +164,8 @@ CoordCanvas {
 
         function _changeMap(map, location) {
             console.log("Player wants to change location " + map + " " + location);
+            theSvgInspector.spawnLocation = location;
+            theSvgInspector.map = map;
         }
     }
 

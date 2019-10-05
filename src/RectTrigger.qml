@@ -32,7 +32,6 @@ VisualizedBoxBody {
     signal triggered(var entity)
 
     Component.onCompleted: {
-        console.log("#fixtures: " + theTrigger.fixtures.length)
         for (let i=0; i<fixtures.length; ++i) {
             let f = fixtures[i];
             f.beginContact.connect(_collidesWith);

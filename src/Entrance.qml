@@ -24,7 +24,11 @@ import QtQuick 2.12
 import Clayground.Physics 1.0
 
 RectTrigger {
+    opacity: .5
+    color: "yellow"
+    property string map: "map1"
+    property string location: "south"
     signal entered(string map, string location)
-    onTriggered: entered("map1", "south");
+    onTriggered: entered(map, location);
 }
 
