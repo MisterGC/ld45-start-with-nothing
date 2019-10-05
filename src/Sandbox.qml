@@ -73,6 +73,7 @@ CoordCanvas {
             if (hit >= 0) {
                 objs[hit].destroy();
                 let obj = objs.splice(hit, 1);
+                theSheet.pushNote(color);
             }
         }
 
@@ -131,6 +132,19 @@ CoordCanvas {
             objs.push(obj);
         }
 
+    }
+
+    SheetOfMusic {
+        id: theSheet
+        width: parent.width * .95
+        height: .1 * parent.height
+        anchors {
+           top: parent.top
+           topMargin: height * .1
+           horizontalCenter: parent.horizontalCenter
+        }
+        color: "black"
+        opacity: .8
     }
 
 }

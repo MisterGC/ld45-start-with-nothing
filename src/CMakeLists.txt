@@ -11,6 +11,7 @@ add_executable (${PROJECT_NAME}
 main.cpp
 main.qml
 Sandbox.qml
+SheetOfMusic.qml
 Sounding.qml
 Player.qml
 Wall.qml

@@ -3,6 +3,7 @@
         <file>main.qml</file>
         <file>Player.qml</file>
         <file>Sandbox.qml</file>
+        <file>SheetOfMusic.qml</file>
         <file>Sounding.qml</file>
         <file>Wall.qml</file>
         <file>map.svg</file>
