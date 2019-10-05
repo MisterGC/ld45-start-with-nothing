@@ -27,7 +27,36 @@ Rectangle {
     id: theSheet
 
     property var notes: []
+    property var instrument: new Map()
     readonly property string soundPath: (typeof ClayLiveLoader !== 'undefined' ? ClayLiveLoader.sandboxDir + "/sound" : "qrc:")
+
+    Component { id: instrumentSound; SoundEffect {} }
+    function _addInstrSound(color) {
+       instrument.set(color, instrumentSound.createObject(theSheet, {source: soundPath + "/" + color + ".wav" }));
+    }
+    Component.onCompleted: {
+        _addInstrSound("blue");
+        _addInstrSound("green");
+    }
+    Timer {
+        id: trackPlayer
+
+        interval: 400
+        triggeredOnStart: true
+        repeat: true
+
+        property int idx: 0
+        onTriggered: {
+            if (idx < notes.length) {
+                instrument.get(notes[idx]).play();
+                idx++;
+            }
+            else {
+                stop();
+                idx = 0;
+            }
+        }
+    }
 
     function pushNote(color) {
         if (notes.length < theGrid.columns) {
@@ -43,9 +72,7 @@ Rectangle {
         id: soundFxComp
         SoundEffect {
             id: sfx
-            Component.onCompleted: {
-                play();
-            }
+            Component.onCompleted: play();
             onPlayingChanged: {
                 if (!playing) sfx.destroy();
             }
@@ -81,6 +108,11 @@ Rectangle {
                 height: theGrid.height / theGrid.rows
             }
         }
+    }
+
+    MouseArea {
+        anchors.fill: parent
+        onClicked: trackPlayer.start()
     }
 
 }
