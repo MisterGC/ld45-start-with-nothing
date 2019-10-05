@@ -121,7 +121,12 @@ CoordCanvas {
                                  noteColor: cfg["color"]});
             }
             else {
-                obj = comp.createObject(coordSys, {world: physicsWorld, xWu: x, yWu: y, widthWu: width, heightWu: height, color: "#3e1900"});
+                obj = comp.createObject(coordSys,
+                                        {world: physicsWorld,
+                                            xWu: x,
+                                            yWu: y,
+                                            widthWu: width,
+                                            heightWu: height});
                 obj.pixelPerUnit = Qt.binding( _ => {return world.pixelPerUnit;} );
                 if (compStr === (world.qmlResPrefix + "Player.qml")) {
                     player = obj;
@@ -133,6 +138,18 @@ CoordCanvas {
             objs.push(obj);
         }
 
+        onEnd: {
+            for (let o of objs) {
+                if (o instanceof Entrance) {
+                    o.makeTriggerableBy(player);
+                    o.entered.connect(_changeMap)
+                }
+            }
+        }
+
+        function _changeMap(map, location) {
+            console.log("Player wants to change location " + map + " " + location);
+        }
     }
 
     SheetOfMusic {
