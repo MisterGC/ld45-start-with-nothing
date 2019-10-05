@@ -1,0 +1,10 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>Player.qml</file>
+        <file>Sandbox.qml</file>
+        <file>Sounding.qml</file>
+        <file>Wall.qml</file>
+        <file>map.svg</file>
+    </qresource>
+</RCC>
