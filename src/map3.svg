@@ -25,9 +25,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.70000001"
-     inkscape:cx="219.43372"
-     inkscape:cy="372.30205"
+     inkscape:zoom="2.8"
+     inkscape:cx="130.07558"
+     inkscape:cy="106.93299"
      inkscape:document-units="mm"
      inkscape:current-layer="svg1623"
      showgrid="true"
@@ -59,7 +59,7 @@
        id="guide306"
        inkscape:locked="false" />
     <sodipodi:guide
-       position="2.2042251,35.058687"
+       position="29.576635,10.583333"
        orientation="0,1"
        id="guide326"
        inkscape:locked="false" />
@@ -81,6 +81,16 @@
       </cc:Work>
     </rdf:RDF>
   </metadata>
+  <rect
+     y="128.5643"
+     x="6.335588"
+     height="27.794573"
+     width="57.032356"
+     id="rect5922-6-8"
+     style="opacity:1;fill:#ba7100;fill-opacity:1;stroke:none;stroke-width:1.35385489;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1">
+    <desc
+       id="desc5920-1-4">{&quot;component&quot;:&quot;Decoration.qml&quot;, &quot;image&quot;: &quot;stage.png&quot;, &quot;physics&quot;:false}</desc>
+  </rect>
   <g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
@@ -144,16 +154,6 @@
        style="opacity:1;fill:#3e1900;fill-opacity:1;stroke:none;stroke-width:0.48153093;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1">
       <desc
          id="desc5900-1-6-2">{&quot;component&quot;:&quot;Wall.qml&quot;}</desc>
-    </rect>
-    <rect
-       style="opacity:1;fill:#808080;fill-opacity:1;stroke:none;stroke-width:1.17882073;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       id="rect368"
-       width="64.201668"
-       height="9.4563179"
-       x="2.844656"
-       y="143.4317">
-      <desc
-         id="desc1175">{&quot;component&quot;:&quot;StageTrigger.qml&quot;}</desc>
     </rect>
     <rect
        y="11.535337"
@@ -255,5 +255,45 @@
       <desc
          id="desc5900-2-2">{&quot;component&quot;:&quot;Wall.qml&quot;}</desc>
     </rect>
+    <rect
+       style="opacity:1;fill:#808080;fill-opacity:1;stroke:none;stroke-width:1.17882073;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect368"
+       width="64.201668"
+       height="9.4563179"
+       x="2.9391501"
+       y="147.21146">
+      <desc
+         id="desc1175">{&quot;component&quot;:&quot;StageTrigger.qml&quot;}</desc>
+    </rect>
   </g>
+  <rect
+     y="158.81302"
+     x="5.7106872"
+     height="15.699333"
+     width="28.339241"
+     id="rect5922-6"
+     style="opacity:1;fill:#d45500;fill-opacity:1;stroke:none;stroke-width:0.71724272;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1">
+    <desc
+       id="desc5920-1">{&quot;component&quot;:&quot;Decoration.qml&quot;, &quot;image&quot;: &quot;audience.png&quot;, &quot;physics&quot;:false}</desc>
+  </rect>
+  <rect
+     y="174.58272"
+     x="19.42935"
+     height="15.699333"
+     width="28.339241"
+     id="rect5922-6-5"
+     style="opacity:1;fill:#d45500;fill-opacity:1;stroke:none;stroke-width:0.71724272;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1">
+    <desc
+       id="desc5920-1-9">{&quot;component&quot;:&quot;Decoration.qml&quot;, &quot;image&quot;: &quot;audience.png&quot;, &quot;physics&quot;:false}</desc>
+  </rect>
+  <rect
+     y="158.82445"
+     x="34.101357"
+     height="15.699333"
+     width="28.339241"
+     id="rect5922-6-5-4"
+     style="opacity:1;fill:#d45500;fill-opacity:1;stroke:none;stroke-width:0.71724272;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1">
+    <desc
+       id="desc5920-1-9-9">{&quot;component&quot;:&quot;Decoration.qml&quot;, &quot;image&quot;: &quot;audience.png&quot;, &quot;physics&quot;:false}</desc>
+  </rect>
 </svg>

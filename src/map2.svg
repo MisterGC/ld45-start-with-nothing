@@ -25,9 +25,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.979899"
-     inkscape:cx="61.440847"
-     inkscape:cy="150.39986"
+     inkscape:zoom="2.8"
+     inkscape:cx="236.9375"
+     inkscape:cy="349.43653"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -85,6 +85,16 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1">
+    <rect
+       y="31.677166"
+       x="27.319162"
+       height="17.97323"
+       width="16.137718"
+       id="rect5922-6-8-83"
+       style="opacity:1;fill:#ba7100;fill-opacity:1;stroke:none;stroke-width:0.57911599;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1">
+      <desc
+         id="desc5920-1-4-83">{&quot;component&quot;:&quot;Decoration.qml&quot;, &quot;image&quot;: &quot;plantfloor.png&quot;, &quot;physics&quot;:false}</desc>
+    </rect>
     <rect
        y="136.15262"
        x="66.380043"
@@ -566,8 +576,8 @@
          id="desc5920-8-6-7">{&quot;component&quot;:&quot;Sounding.qml&quot;, &quot;color&quot;:&quot;blue&quot;}</desc>
     </rect>
     <rect
-       y="120.74542"
-       x="38.352497"
+       y="119.67635"
+       x="37.684322"
        height="4.3508554"
        width="4.1819134"
        id="rect5922-1-3-0"
@@ -704,6 +714,46 @@
        style="opacity:1;fill:#5aa02c;fill-opacity:1;stroke:none;stroke-width:0.14504619;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1">
       <desc
          id="desc5920-8-8-7-3">{&quot;component&quot;:&quot;Sounding.qml&quot;, &quot;color&quot;:&quot;green&quot;}</desc>
+    </rect>
+    <rect
+       y="100.73523"
+       x="7.5624266"
+       height="7.4843907"
+       width="31.540249"
+       id="rect5922-6-8"
+       style="opacity:1;fill:#ba7100;fill-opacity:1;stroke:none;stroke-width:0.52244699;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1">
+      <desc
+         id="desc5920-1-4">{&quot;component&quot;:&quot;Decoration.qml&quot;, &quot;image&quot;: &quot;tostage.png&quot;, &quot;physics&quot;:false}</desc>
+    </rect>
+    <rect
+       y="36.401867"
+       x="91.953094"
+       height="15.705373"
+       width="20.767927"
+       id="rect5922-6-8-8"
+       style="opacity:1;fill:#ba7100;fill-opacity:1;stroke:none;stroke-width:0.61411852;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1">
+      <desc
+         id="desc5920-1-4-86">{&quot;component&quot;:&quot;Decoration.qml&quot;, &quot;image&quot;: &quot;birdfloor.png&quot;, &quot;physics&quot;:false}</desc>
+    </rect>
+    <rect
+       y="33.756035"
+       x="158.66588"
+       height="21.752993"
+       width="22.279833"
+       id="rect5922-6-8-3"
+       style="opacity:1;fill:#ba7100;fill-opacity:1;stroke:none;stroke-width:0.748595;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1">
+      <desc
+         id="desc5920-1-4-3">{&quot;component&quot;:&quot;Decoration.qml&quot;, &quot;image&quot;: &quot;sunfloor.png&quot;, &quot;physics&quot;:false}</desc>
+    </rect>
+    <rect
+       y="90.830437"
+       x="157.81543"
+       height="30.257456"
+       width="11.790993"
+       id="rect5922-6-8-80"
+       style="opacity:1;fill:#ba7100;fill-opacity:1;stroke:none;stroke-width:0.64227766;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1">
+      <desc
+         id="desc5920-1-4-4">{&quot;component&quot;:&quot;Decoration.qml&quot;, &quot;image&quot;: &quot;guitarfloor.png&quot;, &quot;physics&quot;:false}</desc>
     </rect>
   </g>
 </svg>

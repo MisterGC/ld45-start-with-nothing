@@ -1,8 +1,18 @@
 <RCC>
     <qresource prefix="/">
+        <file>audience.png</file>
+        <file>birdfloor.png</file>
         <file>bluenote.png</file>
         <file>greennote.png</file>
+        <file>guitarfloor.png</file>
+        <file>plant.png</file>
+        <file>plantfloor.png</file>
+        <file>plant2.png</file>
         <file>player.png</file>
+        <file>sofa.png</file>
+        <file>stage.png</file>
+        <file>sunfloor.png</file>
+        <file>tostage.png</file>
     </qresource>
 </RCC>
 

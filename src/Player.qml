@@ -28,6 +28,7 @@ import Clayground.ScalingCanvas 1.0
 VisualizedBoxBody
 {
     id: thePlayer
+    z: 99
     bodyType: Body.Dynamic
     color: "#3fa4c8"
     bullet: true

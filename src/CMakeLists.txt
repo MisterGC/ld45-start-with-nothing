@@ -11,6 +11,7 @@ add_executable (${PROJECT_NAME}
     main.cpp
     main.qml
     GameConfig.qml
+    Decoration.qml
     Entrance.qml
     RectTrigger.qml
     Sandbox.qml

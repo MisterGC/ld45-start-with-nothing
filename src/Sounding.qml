@@ -27,6 +27,7 @@ import Box2D 2.0
 
 VisualizedBoxBody
 {
+    z: 50
     property string noteColor: ""
     source: noteColor !== "" ?  gameCfg.visualsPath + "/" + noteColor + "note" + ".png"
                              : ""

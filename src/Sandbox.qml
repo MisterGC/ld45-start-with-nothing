@@ -31,7 +31,9 @@ CoordCanvas {
     id: world
     height: parent.height
     width: parent.width
-    pixelPerUnit: .75 * width / 70
+    pixelPerUnit: height / 70
+
+    Rectangle {parent: coordSys; anchors.fill: parent; color: "#e8ddd8" }
 
     property bool standaloneApp: typeof ClayLiveLoader === 'undefined'
     readonly property string qmlResPrefix: standaloneApp ? "qrc:/" : ""
@@ -168,7 +170,7 @@ CoordCanvas {
             let compStr = world.qmlResPrefix + cfg["component"];
             let comp = Qt.createComponent(compStr);
 
-            let obj = comp.createObject(coordSys,{world: physicsWorld});
+            let obj = comp.createObject(coordSys, {world: physicsWorld});
             obj.pixelPerUnit = Qt.binding( _ => {return world.pixelPerUnit;} );
             obj.visible = false;
             obj.xWu = x;
@@ -191,6 +193,10 @@ CoordCanvas {
             }
             else if (obj instanceof Sounding) {
                 obj.noteColor = cfg["color"];
+            }
+            else if (obj instanceof Decoration) {
+                obj.source = gameCfg.visualsPath + "/" + cfg["image"];
+                obj.active = cfg["physics"];
             }
 
             obj.visible = true;

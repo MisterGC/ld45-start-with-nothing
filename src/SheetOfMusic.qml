@@ -71,8 +71,6 @@ Rectangle {
             notesChanged();
             soundFxComp.createObject(theSheet, {source: gameCfg.soundPath + "/" + color + ".wav" });
         }
-
-        // TODO Emit that sheet of music is full
     }
 
     Component {

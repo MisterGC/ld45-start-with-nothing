@@ -25,7 +25,7 @@ import Clayground.Physics 1.0
 
 RectTrigger {
     opacity: .5
-    color: "green"
+    color: "transparent"
     signal entered()
     onTriggered: entered();
 }
