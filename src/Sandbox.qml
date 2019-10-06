@@ -66,6 +66,10 @@ CoordCanvas {
         }
     }
 
+    function onPlayerEnteredStage() {
+        theSheet.play();
+    }
+
     Keys.forwardTo: gameCtrl
     GameController {
         id: gameCtrl
@@ -151,6 +155,10 @@ CoordCanvas {
                 if (o instanceof Entrance) {
                     o.makeTriggerableBy(player);
                     o.entered.connect(_changeMap)
+                }
+                if (o instanceof StageTrigger) {
+                    o.makeTriggerableBy(player);
+                    o.entered.connect(world.onPlayerEnteredStage);
                 }
             }
         }

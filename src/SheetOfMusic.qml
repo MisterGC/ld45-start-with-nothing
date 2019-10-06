@@ -38,6 +38,11 @@ Rectangle {
         _addInstrSound("blue");
         _addInstrSound("green");
     }
+
+    function play() {
+        trackPlayer.start();
+    }
+
     Timer {
         id: trackPlayer
 
@@ -109,10 +114,4 @@ Rectangle {
             }
         }
     }
-
-    MouseArea {
-        anchors.fill: parent
-        onClicked: trackPlayer.start()
-    }
-
 }

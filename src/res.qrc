@@ -8,6 +8,7 @@
         <file>Sandbox.qml</file>
         <file>SheetOfMusic.qml</file>
         <file>Sounding.qml</file>
+        <file>StageTrigger.qml</file>
         <file>Wall.qml</file>
         <file>map1.svg</file>
         <file>map2.svg</file>

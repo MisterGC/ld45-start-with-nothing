@@ -16,6 +16,7 @@ add_executable (${PROJECT_NAME}
     Sandbox.qml
     SheetOfMusic.qml
     Sounding.qml
+    StageTrigger.qml
     Player.qml
     Wall.qml
     res.qrc

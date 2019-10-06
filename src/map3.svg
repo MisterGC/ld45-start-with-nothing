@@ -26,7 +26,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.979899"
-     inkscape:cx="103.73313"
+     inkscape:cx="-3.8481153"
      inkscape:cy="150.78766"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
@@ -77,7 +77,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -146,76 +146,6 @@
          id="desc5900-1-6">{&quot;component&quot;:&quot;Wall.qml&quot;}</desc>
     </rect>
     <rect
-       y="31.904148"
-       x="30.571465"
-       height="4.3508554"
-       width="4.1819134"
-       id="rect5922-1"
-       style="opacity:1;fill:#00aad4;fill-opacity:1;stroke:none;stroke-width:0.14504619;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1">
-      <desc
-         id="desc5920-8">{&quot;component&quot;:&quot;Sounding.qml&quot;, &quot;color&quot;:&quot;blue&quot;}</desc>
-    </rect>
-    <rect
-       y="41.637192"
-       x="25.243195"
-       height="4.3508554"
-       width="4.1819134"
-       id="rect5922-1-2"
-       style="opacity:1;fill:#5aa02c;fill-opacity:1;stroke:none;stroke-width:0.14504619;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1">
-      <desc
-         id="desc5920-8-8">{&quot;component&quot;:&quot;Sounding.qml&quot;, &quot;color&quot;:&quot;green&quot;}</desc>
-    </rect>
-    <rect
-       y="41.195515"
-       x="31.524029"
-       height="4.3508554"
-       width="4.1819134"
-       id="rect5922-1-2-9"
-       style="opacity:1;fill:#5aa02c;fill-opacity:1;stroke:none;stroke-width:0.14504619;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1">
-      <desc
-         id="desc5920-8-8-7">{&quot;component&quot;:&quot;Sounding.qml&quot;, &quot;color&quot;:&quot;green&quot;}</desc>
-    </rect>
-    <rect
-       y="36.438393"
-       x="34.731262"
-       height="4.3508554"
-       width="4.1819134"
-       id="rect5922-1-3"
-       style="opacity:1;fill:#00aad4;fill-opacity:1;stroke:none;stroke-width:0.14504619;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1">
-      <desc
-         id="desc5920-8-6">{&quot;component&quot;:&quot;Sounding.qml&quot;, &quot;color&quot;:&quot;blue&quot;}</desc>
-    </rect>
-    <rect
-       y="20.428263"
-       x="31.07089"
-       height="4.3508554"
-       width="4.1819134"
-       id="rect5922-1-1"
-       style="opacity:1;fill:#00aad4;fill-opacity:1;stroke:none;stroke-width:0.14504619;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1">
-      <desc
-         id="desc5920-8-2">{&quot;component&quot;:&quot;Sounding.qml&quot;, &quot;color&quot;:&quot;blue&quot;}</desc>
-    </rect>
-    <rect
-       style="opacity:1;fill:#00aad4;fill-opacity:1;stroke:none;stroke-width:0.14504619;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       id="rect799"
-       width="4.1819134"
-       height="4.3508554"
-       x="25.185398"
-       y="20.397469">
-      <desc
-         id="desc797">{&quot;component&quot;:&quot;Sounding.qml&quot;, &quot;color&quot;:&quot;blue&quot;}</desc>
-    </rect>
-    <rect
-       y="26.762821"
-       x="35.173275"
-       height="4.3508554"
-       width="4.1819134"
-       id="rect803"
-       style="opacity:1;fill:#00aad4;fill-opacity:1;stroke:none;stroke-width:0.14504619;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1">
-      <desc
-         id="desc801">{&quot;component&quot;:&quot;Sounding.qml&quot;, &quot;color&quot;:&quot;blue&quot;}</desc>
-    </rect>
-    <rect
        y="38.367764"
        x="66.055649"
        height="31.509201"
@@ -234,6 +164,16 @@
        style="opacity:1;fill:#3e1900;fill-opacity:1;stroke:none;stroke-width:0.15123112;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1">
       <desc
          id="desc5900-1-6-6">{&quot;component&quot;:&quot;Wall.qml&quot;}</desc>
+    </rect>
+    <rect
+       style="opacity:1;fill:#808080;fill-opacity:1;stroke:none;stroke-width:1.76499999;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect368"
+       width="58.532028"
+       height="23.252449"
+       x="5.6126599"
+       y="5.0211658">
+      <desc
+         id="desc1175">{&quot;component&quot;:&quot;StageTrigger.qml&quot;}</desc>
     </rect>
   </g>
 </svg>
