@@ -10,5 +10,6 @@
         <file>Wall.qml</file>
         <file>map1.svg</file>
         <file>map2.svg</file>
+        <file>map3.svg</file>
     </qresource>
 </RCC>
