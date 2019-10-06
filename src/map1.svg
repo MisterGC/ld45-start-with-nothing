@@ -14,7 +14,7 @@
    viewBox="0 0 70.02507 70.101294"
    version="1.1"
    id="svg1623"
-   inkscape:version="0.92.3 (2405546, 2018-03-11)"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
    sodipodi:docname="map1.svg">
   <defs
      id="defs1617" />
@@ -25,17 +25,17 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="2.8"
-     inkscape:cx="121.81899"
-     inkscape:cy="115.6452"
+     inkscape:zoom="5.6"
+     inkscape:cx="71.859434"
+     inkscape:cy="129.37805"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
-     showgrid="true"
-     inkscape:window-width="1264"
-     inkscape:window-height="1011"
-     inkscape:window-x="656"
-     inkscape:window-y="32"
-     inkscape:window-maximized="0"
+     showgrid="false"
+     inkscape:window-width="3000"
+     inkscape:window-height="1844"
+     inkscape:window-x="-16"
+     inkscape:window-y="-16"
+     inkscape:window-maximized="1"
      fit-margin-top="0"
      fit-margin-left="0"
      fit-margin-right="0"
@@ -96,8 +96,8 @@
          id="desc5900">{&quot;component&quot;:&quot;Wall.qml&quot;}</desc>
     </rect>
     <rect
-       y="63.496029"
-       x="33.279018"
+       y="62.22036"
+       x="33.420761"
        height="3.7390227"
        width="3.5938382"
        id="rect5922"
@@ -296,8 +296,8 @@
          id="desc5920-8-8-5">{&quot;component&quot;:&quot;Sounding.qml&quot;, &quot;color&quot;:&quot;green&quot;}</desc>
     </rect>
     <rect
-       y="33.268986"
-       x="63.309483"
+       y="33.505222"
+       x="62.506283"
        height="3.7390227"
        width="3.5938382"
        id="rect5922-0"
@@ -306,8 +306,8 @@
          id="desc5920-7">{&quot;component&quot;:&quot;Player.qml&quot;, &quot;location&quot;: &quot;east&quot;}</desc>
     </rect>
     <rect
-       y="33.268986"
-       x="3.3057597"
+       y="33.505222"
+       x="4.3451943"
        height="3.7390227"
        width="3.5938382"
        id="rect5922-8"
@@ -316,7 +316,7 @@
          id="desc5920-6">{&quot;component&quot;:&quot;Player.qml&quot;, &quot;location&quot;: &quot;west&quot;}</desc>
     </rect>
     <rect
-       y="2.652915"
+       y="3.7395966"
        x="33.354866"
        height="3.7390227"
        width="3.5938382"

@@ -107,6 +107,7 @@ CoordCanvas {
         Component.onCompleted: map = "map1"
 
         onBegin: {
+            world.observedItem = null;
             world.viewPortCenterWuX = 0;
             world.viewPortCenterWuY = 0;
             world.worldXMax = widthWu;
@@ -131,6 +132,7 @@ CoordCanvas {
                 obj.pixelPerUnit = Qt.binding( _ => {return world.pixelPerUnit;} );
             }
 
+            obj.visible = false;
             obj.xWu = x;
             obj.yWu = y;
             obj.widthWu = width;
@@ -150,6 +152,7 @@ CoordCanvas {
                obj.location = cfg["location"];
             }
 
+            obj.visible = true;
             objs.push(obj);
         }
 
@@ -163,7 +166,6 @@ CoordCanvas {
         }
 
         function _changeMap(map, location) {
-            console.log("Player wants to change location " + map + " " + location);
             theSvgInspector.spawnLocation = location;
             theSvgInspector.map = map;
         }
