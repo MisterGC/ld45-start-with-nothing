@@ -48,7 +48,7 @@ Rectangle {
     Timer {
         id: trackPlayer
 
-        interval: 400
+        interval: 700
         triggeredOnStart: true
         repeat: true
 

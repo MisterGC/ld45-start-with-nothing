@@ -21,6 +21,7 @@
  *
  */
 import QtQuick 2.12
+import QtMultimedia 5.12
 import Box2D 2.0
 import Clayground.SvgUtils 1.0
 import Clayground.ScalingCanvas 1.0
@@ -75,10 +76,32 @@ CoordCanvas {
         }
     }
 
+    SoundEffect {
+        id: bgMusic
+        Component.onCompleted: play();
+        source: gameCfg.soundPath + "/bgmusic.wav"
+        loops: SoundEffect.Infinite
+    }
+
     function onPlayerEnteredStage() {
+        bgMusic.stop();
         theSheet.play();
-        player.say("Enjoy the Show!");
         player.active = false;
+        let dialog = ['Enjoy the Show!',
+                      'This is my new song ... ',
+                      '... thanks man!',
+                      'Unfortunately this game is such a ',
+                      'short experience, but you know ',
+                      'I had to start with nothing ;)',
+                      'Click on the screen to restart!' ];
+        player.speakDialog(dialog, 2000);
+    }
+
+    MouseArea {
+        anchors.fill: parent
+        z: 99
+        onClicked: {theSvgInspector.spawnLocation = "south"; theSvgInspector.map = "map1"}
+        //enabled: player ? (!player.active && theSvgInspector.map === "map3") : false
     }
 
     Keys.forwardTo: gameCtrl
@@ -213,6 +236,20 @@ CoordCanvas {
                     o.makeTriggerableBy(player);
                     o.entered.connect(world.onPlayerEnteredStage);
                 }
+            }
+            if (map === "map1") {
+                let dialog = ['Hi there, my name is Jimmy.',
+                              'How are you?',
+                              'I wanna compose a song ...',
+                              '... but have no ideas :(',
+                              'What about you Dude?',
+                              'Use the cursor keys or ',
+                              'the left anlog stick of your gamepad ',
+                              'Ok, let\'s go and compose!'
+                    ];
+                player.speakDialog(dialog, 2000);
+                theSheet.notes = [];
+                bgMusic.play();
             }
         }
 

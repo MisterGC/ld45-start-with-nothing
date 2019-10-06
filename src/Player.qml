@@ -47,8 +47,35 @@ VisualizedBoxBody
     function stopLeft() { if (body.linearVelocity.x < 0) body.linearVelocity.x = 0; }
     function stopRight() { if (body.linearVelocity.x > 0) body.linearVelocity.x = 0; }
 
-    function say(text) {
-        saidWordsComponent.createObject(coordSys,{text: text, player: thePlayer});
+    function say(text, timeToLive) {
+        let ttL = timeToLive ? timeToLive : 1000
+        saidWordsComponent.createObject(coordSys,{text: text, player: thePlayer, ttl: ttL});
+    }
+
+    Timer {
+        id: dialogPlayer
+        property var dialog: []
+        property int idx: 0
+        onRunningChanged: {
+            thePlayer.active = !running;
+            if (running) idx = 0;
+        }
+        repeat: true
+        triggeredOnStart: true
+        onTriggered: {
+            if (idx < dialog.length) {
+                thePlayer.say(dialog[idx], interval);
+                idx++;
+            }
+            else
+                stop();
+        }
+    }
+
+    function speakDialog(lines, ttlPerSentence) {
+        dialogPlayer.dialog = lines;
+        dialogPlayer.interval = ttlPerSentence;
+        dialogPlayer.restart();
     }
 
     signal caughtSounding(var sounding);
@@ -82,6 +109,7 @@ VisualizedBoxBody
             id: saidWords
 
             property var player: thePlayer
+            property int ttl: 1000
             y: player ? player.y - height : 0
             x: player ? player.x - (width - player.width) * .5 : 0
 
@@ -91,9 +119,9 @@ VisualizedBoxBody
             font.bold: true
             font.family: "Monospace"
 
-            Component.onCompleted: opacity = 0;
-            Behavior on opacity {NumberAnimation {duration: 1000}}
-            onOpacityChanged: { if (opacity < 0.05) saidWords.destroy(); }
+            Component.onCompleted: opacity = 0.5;
+            Behavior on opacity {NumberAnimation {duration: ttl}}
+            onOpacityChanged: { if (opacity < 0.505) saidWords.destroy(); }
         }
     }
 }

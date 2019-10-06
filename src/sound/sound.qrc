@@ -2,6 +2,7 @@
     <qresource prefix="/">
         <file>blue.wav</file>
         <file>green.wav</file>
+        <file>bgmusic.wav</file>
     </qresource>
 </RCC>
 
