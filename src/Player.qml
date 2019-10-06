@@ -32,7 +32,7 @@ VisualizedBoxBody
     bullet: true
     property real maxVelo: 25
     categories: collCats.cPlayer
-    collidesWith: collCats.cWall | collCats.cSounding
+    collidesWith: collCats.cWall
 
     function moveUp() { body.linearVelocity.y = -maxVelo; }
     function moveDown() { body.linearVelocity.y = maxVelo; }
@@ -43,4 +43,32 @@ VisualizedBoxBody
     function stopDown() { if (body.linearVelocity.y > 0) body.linearVelocity.y = 0; }
     function stopLeft() { if (body.linearVelocity.x < 0) body.linearVelocity.x = 0; }
     function stopRight() { if (body.linearVelocity.x > 0) body.linearVelocity.x = 0; }
+
+    Component.onCompleted: {
+        let obj = thinkSpaceComp.createObject(thePlayer,{});
+        obj.beginContact.connect(_soundingDetected);
+        obj.endContact.connect(_soundingLost);
+        body.addFixture(obj);
+    }
+
+    function _soundingDetected(fixture) {
+        console.log("That might sound good ...");
+    }
+
+    function _soundingLost(fixture) {
+        console.log("... don't mind, just a bad idea");
+    }
+
+    Component {
+        id: thinkSpaceComp
+        Box {
+            x: -thePlayer.width
+            y: -thePlayer.height
+            width: thePlayer.width * 3
+            height: thePlayer.height * 3
+            sensor: true
+            categories: collCats.cThinkSpace
+            collidesWith: collCats.cSounding
+        }
+    }
 }

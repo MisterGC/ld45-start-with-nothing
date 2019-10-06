@@ -24,7 +24,8 @@ import QtQuick 2.12
 import Box2D 2.0
 
 QtObject {
-    property var cWall: Box.Category1;
-    property var cPlayer: Box.Category2;
-    property var cSounding: Box.Category3;
+    readonly property int cWall: Box.Category1;
+    readonly property int cPlayer: Box.Category2;
+    readonly property int cSounding: Box.Category3;
+    readonly property int cThinkSpace: Box.Category4;
 }

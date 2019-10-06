@@ -37,6 +37,6 @@ VisualizedBoxBody
     bodyType: Body.Dynamic
     property real maxVelo: 25
     categories: collCats.cSounding
-    collidesWith: collCats.cSounding | collCats.cWall
+    collidesWith: collCats.cSounding | collCats.cWall | collCats.cThinkSpace
     restitution: 1
 }
