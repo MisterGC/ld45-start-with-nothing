@@ -15,7 +15,7 @@
    viewBox="0 0 210 297"
    version="1.1"
    id="svg8"
-   inkscape:version="0.92.3 (2405546, 2018-03-11)"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
    sodipodi:docname="AssetCollection.svg"
    inkscape:export-filename="/home/mistergc/dev/ld45-start-with-nothing/src/visuals/AssetCollection.svg.png"
    inkscape:export-xdpi="100"
@@ -29,16 +29,16 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.11186018"
-     inkscape:cx="4022.1229"
-     inkscape:cy="-770.1426"
+     inkscape:zoom="0.89488144"
+     inkscape:cx="3208.765"
+     inkscape:cy="-2487.0675"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="1920"
-     inkscape:window-height="1012"
-     inkscape:window-x="0"
-     inkscape:window-y="32"
+     inkscape:window-width="3000"
+     inkscape:window-height="1844"
+     inkscape:window-x="-16"
+     inkscape:window-y="-16"
      inkscape:window-maximized="1"
      inkscape:snap-global="false">
     <inkscape:grid
@@ -428,10 +428,10 @@
     </g>
     <g
        id="g2303"
-       inkscape:export-xdpi="250"
-       inkscape:export-ydpi="250"
+       inkscape:export-xdpi="100"
+       inkscape:export-ydpi="100"
        style="stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none"
-       transform="translate(-195.13759,-62.089233)">
+       transform="translate(352.07443,596.20056)">
       <path
          sodipodi:nodetypes="ccccc"
          inkscape:connector-curvature="0"
@@ -3566,5 +3566,23 @@
          d="m 391.99748,477.8415 -1.04533,-3.34504 42.37903,-0.6167 -0.14785,3.33454 z"
          style="opacity:0.40800003;fill:#d5c0b8;fill-opacity:1;stroke:#d5c0b8;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
     </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:60.79989243px;line-height:1.25;font-family:'DejaVu Sans Mono';-inkscape-font-specification:'DejaVu Sans Mono, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#d5c0b8;fill-opacity:1;stroke:none;stroke-width:1.52001822"
+       x="735.98981"
+       y="893.32776"
+       id="text3944-0"
+       inkscape:export-xdpi="100.19389"
+       inkscape:export-ydpi="100.19389"><tspan
+         sodipodi:role="line"
+         x="735.98981"
+         y="893.32776"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:60.79989243px;font-family:'DejaVu Sans Mono';-inkscape-font-specification:'DejaVu Sans Mono, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#d5c0b8;fill-opacity:1;stroke-width:1.52001822"
+         id="tspan1393">Empty Sheet </tspan><tspan
+         sodipodi:role="line"
+         x="735.98981"
+         y="969.32764"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:60.79989243px;font-family:'DejaVu Sans Mono';-inkscape-font-specification:'DejaVu Sans Mono, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#d5c0b8;fill-opacity:1;stroke-width:1.52001822"
+         id="tspan1397">of Music</tspan></text>
   </g>
 </svg>
