@@ -35,6 +35,8 @@ CoordCanvas {
     property bool standaloneApp: typeof ClayLiveLoader === 'undefined'
     readonly property string qmlResPrefix: standaloneApp ? "qrc:/" : ""
 
+    CollCats {id: collCats}
+
     World {
         id: physicsWorld
         gravity: Qt.point(0,0)
@@ -122,16 +124,8 @@ CoordCanvas {
             let compStr = world.qmlResPrefix + cfg["component"];
             let comp = Qt.createComponent(compStr);
 
-            let obj = null;
-            let hasNoPhysics = compStr.includes("Sounding");
-            if (hasNoPhysics)
-                obj = comp.createObject(coordSys, {canvas: world, noteColor: cfg["color"]});
-            else
-            {
-                obj = comp.createObject(coordSys,{world: physicsWorld});
-                obj.pixelPerUnit = Qt.binding( _ => {return world.pixelPerUnit;} );
-            }
-
+            let obj = comp.createObject(coordSys,{world: physicsWorld});
+            obj.pixelPerUnit = Qt.binding( _ => {return world.pixelPerUnit;} );
             obj.visible = false;
             obj.xWu = x;
             obj.yWu = y;
@@ -150,6 +144,9 @@ CoordCanvas {
             else if (obj instanceof Entrance) {
                obj.map = cfg["map"];
                obj.location = cfg["location"];
+            }
+            else if (obj instanceof Sounding) {
+                obj.noteColor = cfg["color"];
             }
 
             obj.visible = true;

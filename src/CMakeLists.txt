@@ -10,6 +10,7 @@ find_package(Qt5 COMPONENTS Core Quick REQUIRED)
 add_executable (${PROJECT_NAME}
     main.cpp
     main.qml
+	CollCats.qml
 	Entrance.qml
 	RectTrigger.qml
     Sandbox.qml

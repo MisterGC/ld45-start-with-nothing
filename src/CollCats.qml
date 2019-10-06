@@ -21,22 +21,10 @@
  *
  */
 import QtQuick 2.12
-import Clayground.ScalingCanvas 1.0
-import Clayground.Physics 1.0
 import Box2D 2.0
 
-VisualizedBoxBody
-{
-    property string noteColor: ""
-    color: noteColor
-    Component.onCompleted: {
-        linearVelocity.x = Math.random() * 5
-        linearVelocity.y = Math.random() * 5
-    }
-
-    bodyType: Body.Dynamic
-    property real maxVelo: 25
-    categories: collCats.cSounding
-    collidesWith: collCats.cSounding | collCats.cWall
-    restitution: 1
+QtObject {
+    property var cWall: Box.Category1;
+    property var cPlayer: Box.Category2;
+    property var cSounding: Box.Category3;
 }

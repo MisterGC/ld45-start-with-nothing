@@ -31,11 +31,8 @@ VisualizedBoxBody
     color: "#3fa4c8"
     bullet: true
     property real maxVelo: 25
-    categories: Box.Category2
-    collidesWith: Box.Category1
-    property bool isPlayer: true
-    property int energy: 10000
-    readonly property int maxEnergy: 10000
+    categories: collCats.cPlayer
+    collidesWith: collCats.cWall | collCats.cSounding
 
     function moveUp() { body.linearVelocity.y = -maxVelo; }
     function moveDown() { body.linearVelocity.y = maxVelo; }
