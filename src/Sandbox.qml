@@ -25,6 +25,7 @@ import Box2D 2.0
 import Clayground.SvgUtils 1.0
 import Clayground.ScalingCanvas 1.0
 import Clayground.GameController 1.0
+import QtGamepad 1.0
 
 CoordCanvas {
     id: world
@@ -35,7 +36,8 @@ CoordCanvas {
     property bool standaloneApp: typeof ClayLiveLoader === 'undefined'
     readonly property string qmlResPrefix: standaloneApp ? "qrc:/" : ""
 
-    GameConfig {id: gameCfg}
+    GameConfig {id: gameCfg; world: world}
+    //DebugDraw { world: physicsWorld }
 
     World {
         id: physicsWorld
@@ -47,8 +49,7 @@ CoordCanvas {
     property var player: null
     onPlayerChanged: {
        if (player) {
-           gameCtrl.updateXMovement();
-           gameCtrl.updateYMovement();
+           gameCtrls.sync();
            player.caughtSounding.connect(onPlayerCaughtSound);
        }
     }
@@ -71,25 +72,63 @@ CoordCanvas {
     }
 
     Keys.forwardTo: gameCtrl
-    GameController {
-        id: gameCtrl
+    Item {
+        id: gameCtrls
         anchors.fill: parent
-        Component.onCompleted: {
-            selectKeyboard(Qt.Key_Up, Qt.Key_Down, Qt.Key_Left, Qt.Key_Right, Qt.Key_A, Qt.Key_S);
+
+        GameController {
+            id: gameCtrl
+            anchors.fill: parent
+            Component.onCompleted: {
+                selectKeyboard(Qt.Key_Up, Qt.Key_Down, Qt.Key_Left, Qt.Key_Right, Qt.Key_A, Qt.Key_S);
+            }
+
+            onAxisXChanged: gameCtrls.updateXMovement(gameCtrl)
+            onAxisYChanged: gameCtrls.updateYMovement(gameCtrl)
         }
 
-        onAxisXChanged: updateXMovement()
-        function updateXMovement() {
-            if (axisX > 0) player.moveRight();
-            else if (axisX < 0) player.moveLeft();
-            else { player.stopLeft(); player.stopRight();}
+        // Resynchronizes states of game input and
+        // player movement
+        function sync() {
+            let moves = updateXMovement(gameCtrl);
+            moves = moves || updateYMovement(gameCtrl);
+            if (moves) return;
+            let gamepadCand = onDemandGamepadLoader.item;
+            if (gamepadCand) {
+                updateXMovement(gamepadCand);
+                updateYMovement(gamepadCand);
+            }
         }
 
-        onAxisYChanged: updateYMovement()
-        function updateYMovement() {
-            if (axisY > 0) player.moveUp();
-            else if (axisY < 0) player.moveDown();
-            else { player.stopUp(); player.stopDown();}
+        function updateXMovement(ctrl) {
+            if (ctrl.axisX > 0) player.moveRight();
+            else if (ctrl.axisX < 0) player.moveLeft();
+            else { player.stopLeft(); player.stopRight(); return false;}
+            return true;
+        }
+
+        function updateYMovement(ctrl) {
+            if (ctrl.axisY > 0) player.moveUp();
+            else if (ctrl.axisY < 0) player.moveDown();
+            else { player.stopUp(); player.stopDown(); return false;}
+            return true;
+        }
+
+        Loader {
+            id: onDemandGamepadLoader
+            anchors.fill: parent
+            property bool gamepadAvailable: GamepadManager.connectedGamepads.length > 0
+            sourceComponent: gamepadAvailable ? gamepadComp : null
+            Component {
+                id: gamepadComp
+                GameController {
+                    id: gamepad
+                    anchors.fill: parent
+                    Component.onCompleted: { selectGamepad(0, true); }
+                    onAxisXChanged: gameCtrls.updateXMovement(gamepad)
+                    onAxisYChanged: gameCtrls.updateYMovement(gamepad)
+                }
+            }
         }
     }
 
