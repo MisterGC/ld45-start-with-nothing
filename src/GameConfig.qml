@@ -39,4 +39,6 @@ QtObject {
     readonly property string visualsPath: (typeof ClayLiveLoader !== 'undefined'
                                          ? ClayLiveLoader.sandboxDir + "/visuals"
                                          : "qrc:")
+
+    property var world: null
 }

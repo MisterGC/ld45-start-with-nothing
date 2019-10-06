@@ -29,6 +29,9 @@ Rectangle {
     property var notes: []
     property var instrument: new Map()
 
+    readonly property bool full: notes.length === theGrid.columns
+    readonly property color sheetColor: "#2b0c00"
+
     Component { id: instrumentSound; SoundEffect {} }
     function _addInstrSound(color) {
        instrument.set(color, instrumentSound.createObject(theSheet, {source: gameCfg.soundPath + "/" + color + ".wav" }));
@@ -92,11 +95,11 @@ Rectangle {
         function _cellColor(idx, notes) {
             let row = Math.floor(idx/theGrid.columns);
             let col = idx % theGrid.columns;
-            let color = "white"
+            let color = sheetColor;
             if (col < notes.length) {
                 let desColor = (row === 0) ? "blue" : "green"
                 if (desColor === notes[col])
-                    color = desColor;
+                    color = "#ffe3d8";
             }
 
             return color;
@@ -106,7 +109,7 @@ Rectangle {
             model: theGrid.rows * theGrid.columns
             Rectangle {
                 color: theGrid._cellColor(index, theSheet.notes)
-                border.color: "black"
+                border.color: sheetColor
                 border.width: .1 * width
                 width: theGrid.width / theGrid.columns
                 height: theGrid.height / theGrid.rows

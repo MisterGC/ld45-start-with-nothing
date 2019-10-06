@@ -55,6 +55,12 @@ CoordCanvas {
     }
 
     function onPlayerCaughtSound(snd) {
+        if (theSheet.full) {
+            player.say("Stage Time!");
+            return;
+        }
+
+        player.say("I have an idea!");
         let objs = theSvgInspector.objs;
         let hit = -1
         for (let i=0; i<objs.length; ++i)
@@ -69,6 +75,7 @@ CoordCanvas {
 
     function onPlayerEnteredStage() {
         theSheet.play();
+        player.say("Enjoy the Show!");
     }
 
     Keys.forwardTo: gameCtrl

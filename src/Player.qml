@@ -23,6 +23,7 @@
 import QtQuick 2.12
 import Box2D 2.0
 import Clayground.Physics 1.0
+import Clayground.ScalingCanvas 1.0
 
 VisualizedBoxBody
 {
@@ -45,23 +46,21 @@ VisualizedBoxBody
     function stopLeft() { if (body.linearVelocity.x < 0) body.linearVelocity.x = 0; }
     function stopRight() { if (body.linearVelocity.x > 0) body.linearVelocity.x = 0; }
 
+    function say(text) {
+        saidWordsComponent.createObject(coordSys,{text: text, player: thePlayer});
+    }
+
     signal caughtSounding(var sounding);
 
     Component.onCompleted: {
         let obj = thinkSpaceComp.createObject(thePlayer,{});
         obj.beginContact.connect(_soundingDetected);
-//        obj.endContact.connect(_soundingLost);
         body.addFixture(obj);
     }
 
     function _soundingDetected(fixture) {
-        console.log("That might sound good ...");
         thePlayer.caughtSounding(fixture.getBody().target);
     }
-
-//    function _soundingLost(fixture) {
-//        console.log("... don't mind, just a bad idea");
-//    }
 
     Component {
         id: thinkSpaceComp
@@ -73,6 +72,27 @@ VisualizedBoxBody
             sensor: true
             categories: gameCfg.cThinkSpace
             collidesWith: gameCfg.cSounding
+        }
+    }
+
+    Component {
+        id: saidWordsComponent
+        ScalingText {
+            id: saidWords
+
+            property var player: thePlayer
+            y: player ? player.y - height : 0
+            x: player ? player.x - (width - player.width) * .5 : 0
+
+            canvas: gameCfg.world
+            text: ""
+            fontSizeWu: 2
+            font.bold: true
+            font.family: "Monospace"
+
+            Component.onCompleted: opacity = 0;
+            Behavior on opacity {NumberAnimation {duration: 1000}}
+            onOpacityChanged: { if (opacity < 0.05) saidWords.destroy(); }
         }
     }
 }
