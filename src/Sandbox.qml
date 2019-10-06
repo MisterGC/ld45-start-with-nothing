@@ -76,6 +76,7 @@ CoordCanvas {
     function onPlayerEnteredStage() {
         theSheet.play();
         player.say("Enjoy the Show!");
+        player.active = false;
     }
 
     Keys.forwardTo: gameCtrl
