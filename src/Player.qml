@@ -44,20 +44,23 @@ VisualizedBoxBody
     function stopLeft() { if (body.linearVelocity.x < 0) body.linearVelocity.x = 0; }
     function stopRight() { if (body.linearVelocity.x > 0) body.linearVelocity.x = 0; }
 
+    signal caughtSounding(var sounding);
+
     Component.onCompleted: {
         let obj = thinkSpaceComp.createObject(thePlayer,{});
         obj.beginContact.connect(_soundingDetected);
-        obj.endContact.connect(_soundingLost);
+//        obj.endContact.connect(_soundingLost);
         body.addFixture(obj);
     }
 
     function _soundingDetected(fixture) {
         console.log("That might sound good ...");
+        thePlayer.caughtSounding(fixture.getBody().target);
     }
 
-    function _soundingLost(fixture) {
-        console.log("... don't mind, just a bad idea");
-    }
+//    function _soundingLost(fixture) {
+//        console.log("... don't mind, just a bad idea");
+//    }
 
     Component {
         id: thinkSpaceComp

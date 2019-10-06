@@ -49,7 +49,21 @@ CoordCanvas {
        if (player) {
            gameCtrl.updateXMovement();
            gameCtrl.updateYMovement();
+           player.caughtSounding.connect(onPlayerCaughtSound);
        }
+    }
+
+    function onPlayerCaughtSound(snd) {
+        let objs = theSvgInspector.objs;
+        let hit = -1
+        for (let i=0; i<objs.length; ++i)
+            if (objs[i] === snd) hit = i;
+
+        if (hit >= 0) {
+            objs[hit].destroy();
+            let obj = objs.splice(hit, 1);
+            theSheet.pushNote(snd.noteColor);
+        }
     }
 
     Keys.forwardTo: gameCtrl
@@ -72,27 +86,6 @@ CoordCanvas {
             if (axisY > 0) player.moveUp();
             else if (axisY < 0) player.moveDown();
             else { player.stopUp(); player.stopDown();}
-        }
-
-        function destroyOneSounding(color) {
-            let objs = theSvgInspector.objs;
-            let hit = -1
-            for (let i=0; i<objs.length; ++i) {
-                if (objs[i].noteColor && objs[i].noteColor === color) hit = i;
-            }
-            if (hit >= 0) {
-                objs[hit].destroy();
-                let obj = objs.splice(hit, 1);
-                theSheet.pushNote(color);
-            }
-        }
-
-        onButtonAPressedChanged: {
-            if (buttonAPressed) destroyOneSounding("green")
-        }
-
-        onButtonBPressedChanged: {
-            if (buttonBPressed) destroyOneSounding("blue")
         }
     }
 
