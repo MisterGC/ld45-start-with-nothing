@@ -146,56 +146,6 @@
          id="desc5900-1-6">{&quot;component&quot;:&quot;Wall.qml&quot;}</desc>
     </rect>
     <rect
-       y="30.434166"
-       x="32.976891"
-       height="4.3508554"
-       width="4.1819134"
-       id="rect5922-1"
-       style="opacity:1;fill:#00aad4;fill-opacity:1;stroke:none;stroke-width:0.14504619;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1">
-      <desc
-         id="desc5920-8">{&quot;component&quot;:&quot;Sounding.qml&quot;, &quot;color&quot;:&quot;blue&quot;}</desc>
-    </rect>
-    <rect
-       y="46.381226"
-       x="33.060829"
-       height="4.3508554"
-       width="4.1819134"
-       id="rect5922-1-2"
-       style="opacity:1;fill:#5aa02c;fill-opacity:1;stroke:none;stroke-width:0.14504619;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1">
-      <desc
-         id="desc5920-8-8">{&quot;component&quot;:&quot;Sounding.qml&quot;, &quot;color&quot;:&quot;green&quot;}</desc>
-    </rect>
-    <rect
-       y="40.995064"
-       x="33.060829"
-       height="4.3508554"
-       width="4.1819134"
-       id="rect5922-1-2-9"
-       style="opacity:1;fill:#5aa02c;fill-opacity:1;stroke:none;stroke-width:0.14504619;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1">
-      <desc
-         id="desc5920-8-8-7">{&quot;component&quot;:&quot;Sounding.qml&quot;, &quot;color&quot;:&quot;green&quot;}</desc>
-    </rect>
-    <rect
-       y="35.7034"
-       x="33.060829"
-       height="4.3508554"
-       width="4.1819134"
-       id="rect5922-1-3"
-       style="opacity:1;fill:#00aad4;fill-opacity:1;stroke:none;stroke-width:0.14504619;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1">
-      <desc
-         id="desc5920-8-6">{&quot;component&quot;:&quot;Sounding.qml&quot;, &quot;color&quot;:&quot;blue&quot;}</desc>
-    </rect>
-    <rect
-       y="30.317236"
-       x="27.863657"
-       height="4.3508554"
-       width="4.1819134"
-       id="rect5922-1-1"
-       style="opacity:1;fill:#00aad4;fill-opacity:1;stroke:none;stroke-width:0.14504619;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1">
-      <desc
-         id="desc5920-8-2">{&quot;component&quot;:&quot;Sounding.qml&quot;, &quot;color&quot;:&quot;blue&quot;}</desc>
-    </rect>
-    <rect
        y="-0.0018047742"
        x="31.682499"
        height="2.386627"
@@ -204,36 +154,6 @@
        style="opacity:1;fill:#93a7ac;fill-opacity:1;stroke:none;stroke-width:0.13647789;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1">
       <desc
          id="desc5920-8-2-0-3-1-5-7">{&quot;component&quot;:&quot;Entrance.qml&quot;, &quot;map&quot;:&quot;map2&quot;, &quot;location&quot;:&quot;south&quot;}</desc>
-    </rect>
-    <rect
-       style="opacity:1;fill:#00aad4;fill-opacity:1;stroke:none;stroke-width:0.14504619;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       id="rect799"
-       width="4.1819134"
-       height="4.3508554"
-       x="24.65086"
-       y="35.230927">
-      <desc
-         id="desc797">{&quot;component&quot;:&quot;Sounding.qml&quot;, &quot;color&quot;:&quot;blue&quot;}</desc>
-    </rect>
-    <rect
-       y="25.02557"
-       x="31.832407"
-       height="4.3508554"
-       width="4.1819134"
-       id="rect803"
-       style="opacity:1;fill:#00aad4;fill-opacity:1;stroke:none;stroke-width:0.14504619;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1">
-      <desc
-         id="desc801">{&quot;component&quot;:&quot;Sounding.qml&quot;, &quot;color&quot;:&quot;blue&quot;}</desc>
-    </rect>
-    <rect
-       y="51.5784"
-       x="33.155323"
-       height="4.3508554"
-       width="4.1819134"
-       id="rect5922-1-2-4"
-       style="opacity:1;fill:#5aa02c;fill-opacity:1;stroke:none;stroke-width:0.14504619;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1">
-      <desc
-         id="desc5920-8-8-5">{&quot;component&quot;:&quot;Sounding.qml&quot;, &quot;color&quot;:&quot;green&quot;}</desc>
     </rect>
   </g>
 </svg>
