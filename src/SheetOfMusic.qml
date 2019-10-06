@@ -28,11 +28,10 @@ Rectangle {
 
     property var notes: []
     property var instrument: new Map()
-    readonly property string soundPath: (typeof ClayLiveLoader !== 'undefined' ? ClayLiveLoader.sandboxDir + "/sound" : "qrc:")
 
     Component { id: instrumentSound; SoundEffect {} }
     function _addInstrSound(color) {
-       instrument.set(color, instrumentSound.createObject(theSheet, {source: soundPath + "/" + color + ".wav" }));
+       instrument.set(color, instrumentSound.createObject(theSheet, {source: gameCfg.soundPath + "/" + color + ".wav" }));
     }
     Component.onCompleted: {
         _addInstrSound("blue");
@@ -67,7 +66,7 @@ Rectangle {
         if (notes.length < theGrid.columns) {
             notes.push(color);
             notesChanged();
-            soundFxComp.createObject(theSheet, {source: soundPath + "/" + color + ".wav" });
+            soundFxComp.createObject(theSheet, {source: gameCfg.soundPath + "/" + color + ".wav" });
         }
 
         // TODO Emit that sheet of music is full

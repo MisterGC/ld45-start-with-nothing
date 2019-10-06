@@ -10,9 +10,9 @@ find_package(Qt5 COMPONENTS Core Quick REQUIRED)
 add_executable (${PROJECT_NAME}
     main.cpp
     main.qml
-	CollCats.qml
-	Entrance.qml
-	RectTrigger.qml
+    GameConfig.qml
+    Entrance.qml
+    RectTrigger.qml
     Sandbox.qml
     SheetOfMusic.qml
     Sounding.qml
@@ -21,6 +21,7 @@ add_executable (${PROJECT_NAME}
     Wall.qml
     res.qrc
     sound/sound.qrc
+    visuals/visuals.qrc
 )
 
 set_target_properties (${PROJECT_NAME} PROPERTIES

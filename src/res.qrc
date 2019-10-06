@@ -1,7 +1,7 @@
 <RCC>
     <qresource prefix="/">
         <file>main.qml</file>
-        <file>CollCats.qml</file>
+        <file>GameConfig.qml</file>
         <file>Entrance.qml</file>
         <file>Player.qml</file>
         <file>RectTrigger.qml</file>

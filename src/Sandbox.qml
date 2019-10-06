@@ -35,7 +35,7 @@ CoordCanvas {
     property bool standaloneApp: typeof ClayLiveLoader === 'undefined'
     readonly property string qmlResPrefix: standaloneApp ? "qrc:/" : ""
 
-    CollCats {id: collCats}
+    GameConfig {id: gameCfg}
 
     World {
         id: physicsWorld

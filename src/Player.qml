@@ -31,8 +31,9 @@ VisualizedBoxBody
     color: "#3fa4c8"
     bullet: true
     property real maxVelo: 25
-    categories: collCats.cPlayer
-    collidesWith: collCats.cWall
+    categories: gameCfg.cPlayer
+    collidesWith: gameCfg.cWall
+    source: gameCfg.visualsPath + "/player.png"
 
     function moveUp() { body.linearVelocity.y = -maxVelo; }
     function moveDown() { body.linearVelocity.y = maxVelo; }
@@ -70,8 +71,8 @@ VisualizedBoxBody
             width: thePlayer.width * 3
             height: thePlayer.height * 3
             sensor: true
-            categories: collCats.cThinkSpace
-            collidesWith: collCats.cSounding
+            categories: gameCfg.cThinkSpace
+            collidesWith: gameCfg.cSounding
         }
     }
 }

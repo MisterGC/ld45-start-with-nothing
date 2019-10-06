@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/">
+        <file>bluenote.png</file>
+        <file>greennote.png</file>
+        <file>player.png</file>
+    </qresource>
+</RCC>
+

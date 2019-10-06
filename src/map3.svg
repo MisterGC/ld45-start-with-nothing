@@ -25,9 +25,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.979899"
-     inkscape:cx="-3.8481153"
-     inkscape:cy="150.78766"
+     inkscape:zoom="7.919596"
+     inkscape:cx="185.85871"
+     inkscape:cy="135.33486"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -86,16 +86,6 @@
      inkscape:groupmode="layer"
      id="layer1">
     <rect
-       y="33.087982"
-       x="59.901932"
-       height="3.7390227"
-       width="3.5938382"
-       id="rect5922"
-       style="opacity:1;fill:#d45500;fill-opacity:1;stroke:none;stroke-width:0.12464929;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1">
-      <desc
-         id="desc5920">{&quot;component&quot;:&quot;Player.qml&quot;, &quot;location&quot;: &quot;east&quot;}</desc>
-    </rect>
-    <rect
        y="66.120567"
        x="0.31068736"
        height="3.9574225"
@@ -138,30 +128,30 @@
     <rect
        y="0.36449578"
        x="66.052551"
-       height="31.509203"
+       height="30.172855"
        width="3.9601238"
        id="rect2172-9-0"
-       style="opacity:1;fill:#3e1900;fill-opacity:1;stroke:none;stroke-width:0.42534742;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1">
+       style="opacity:1;fill:#3e1900;fill-opacity:1;stroke:none;stroke-width:0.41622993;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1">
       <desc
          id="desc5900-1-6">{&quot;component&quot;:&quot;Wall.qml&quot;}</desc>
     </rect>
     <rect
-       y="38.367764"
+       y="40.171833"
        x="66.055649"
-       height="31.509201"
+       height="29.705132"
        width="3.9601238"
        id="rect2172-9-0-9"
-       style="opacity:1;fill:#3e1900;fill-opacity:1;stroke:none;stroke-width:0.42534742;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1">
+       style="opacity:1;fill:#3e1900;fill-opacity:1;stroke:none;stroke-width:0.41299126;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1">
       <desc
          id="desc5900-1-6-2">{&quot;component&quot;:&quot;Wall.qml&quot;}</desc>
     </rect>
     <rect
-       y="30.893795"
+       y="29.7579"
        x="68.178192"
-       height="8.6576567"
+       height="11.196717"
        width="1.8219676"
        id="rect2172-9-0-0"
-       style="opacity:1;fill:#3e1900;fill-opacity:1;stroke:none;stroke-width:0.15123112;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1">
+       style="opacity:1;fill:#3e1900;fill-opacity:1;stroke:none;stroke-width:0.17198333;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1">
       <desc
          id="desc5900-1-6-6">{&quot;component&quot;:&quot;Wall.qml&quot;}</desc>
     </rect>
@@ -174,6 +164,16 @@
        y="5.0211658">
       <desc
          id="desc1175">{&quot;component&quot;:&quot;StageTrigger.qml&quot;}</desc>
+    </rect>
+    <rect
+       y="32.252762"
+       x="59.668076"
+       height="6.6079388"
+       width="6.1663074"
+       id="rect5922"
+       style="opacity:1;fill:#d45500;fill-opacity:1;stroke:none;stroke-width:0.21705866;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1">
+      <desc
+         id="desc5920">{&quot;component&quot;:&quot;Player.qml&quot;, &quot;location&quot;: &quot;east&quot;}</desc>
     </rect>
   </g>
 </svg>

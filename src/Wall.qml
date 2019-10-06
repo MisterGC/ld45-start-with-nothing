@@ -28,6 +28,6 @@ VisualizedBoxBody
 {
     bodyType: Body.Static
     color: "#7084aa"
-    categories: collCats.cWall
-    collidesWith: collCats.cPlayer | collCats.cSounding
+    categories: gameCfg.cWall
+    collidesWith: gameCfg.cPlayer | gameCfg.cSounding
 }

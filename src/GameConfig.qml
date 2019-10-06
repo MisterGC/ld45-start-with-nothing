@@ -24,8 +24,19 @@ import QtQuick 2.12
 import Box2D 2.0
 
 QtObject {
+
     readonly property int cWall: Box.Category1;
     readonly property int cPlayer: Box.Category2;
     readonly property int cSounding: Box.Category3;
     readonly property int cThinkSpace: Box.Category4;
+
+
+    // Path configuration so that the game can be developed with playground
+    // but deployed as stand-alone app using Qt resource system
+    readonly property string soundPath: (typeof ClayLiveLoader !== 'undefined'
+                                         ? ClayLiveLoader.sandboxDir + "/sound"
+                                         : "qrc:")
+    readonly property string visualsPath: (typeof ClayLiveLoader !== 'undefined'
+                                         ? ClayLiveLoader.sandboxDir + "/visuals"
+                                         : "qrc:")
 }

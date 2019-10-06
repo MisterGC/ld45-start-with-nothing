@@ -28,6 +28,8 @@ import Box2D 2.0
 VisualizedBoxBody
 {
     property string noteColor: ""
+    source: noteColor !== "" ?  gameCfg.visualsPath + "/" + noteColor + "note" + ".png"
+                             : ""
     color: noteColor
     Component.onCompleted: {
         linearVelocity.x = Math.random() * 5
@@ -36,7 +38,7 @@ VisualizedBoxBody
 
     bodyType: Body.Dynamic
     property real maxVelo: 25
-    categories: collCats.cSounding
-    collidesWith: collCats.cSounding | collCats.cWall | collCats.cThinkSpace
+    categories: gameCfg.cSounding
+    collidesWith: gameCfg.cSounding | gameCfg.cWall | gameCfg.cThinkSpace
     restitution: 1
 }

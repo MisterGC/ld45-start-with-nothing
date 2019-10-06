@@ -25,9 +25,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.979899"
-     inkscape:cx="131.52683"
-     inkscape:cy="166.11852"
+     inkscape:zoom="5.6"
+     inkscape:cx="165.85804"
+     inkscape:cy="242.16209"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -86,12 +86,12 @@
      inkscape:groupmode="layer"
      id="layer1">
     <rect
-       y="61.151283"
-       x="33.420761"
-       height="3.7390227"
-       width="3.5938382"
+       y="58.445179"
+       x="32.284866"
+       height="6.5453525"
+       width="6.2120495"
        id="rect5922"
-       style="opacity:1;fill:#d45500;fill-opacity:1;stroke:none;stroke-width:0.12464929;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1">
+       style="opacity:1;fill:#d45500;fill-opacity:1;stroke:none;stroke-width:0.21682803;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1">
       <desc
          id="desc5920">{&quot;component&quot;:&quot;Player.qml&quot;, &quot;location&quot;: &quot;south&quot;}</desc>
     </rect>
@@ -119,19 +119,19 @@
        y="0.039802965"
        x="-0.0090926345"
        height="4.018508"
-       width="31.726509"
+       width="29.454718"
        id="rect2172-0"
-       style="opacity:1;fill:#3e1900;fill-opacity:1;stroke:none;stroke-width:0.42994645;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1">
+       style="opacity:1;fill:#3e1900;fill-opacity:1;stroke:none;stroke-width:0.4142673;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1">
       <desc
          id="desc5900-9">{&quot;component&quot;:&quot;Wall.qml&quot;}</desc>
     </rect>
     <rect
        y="0.038795885"
-       x="38.397636"
+       x="40.134888"
        height="3.9574225"
-       width="31.608393"
+       width="29.871141"
        id="rect2172-6-3"
-       style="opacity:1;fill:#3e1900;fill-opacity:1;stroke:none;stroke-width:0.42587113;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1">
+       style="opacity:1;fill:#3e1900;fill-opacity:1;stroke:none;stroke-width:0.41400245;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1">
       <desc
          id="desc5900-2-6">{&quot;component&quot;:&quot;Wall.qml&quot;}</desc>
     </rect>
@@ -147,11 +147,11 @@
     </rect>
     <rect
        y="-0.0018047742"
-       x="31.682499"
+       x="29.367395"
        height="2.386627"
-       width="6.7495847"
+       width="10.95457"
        id="rect5922-1-1-1-6-6-5-4"
-       style="opacity:1;fill:#93a7ac;fill-opacity:1;stroke:none;stroke-width:0.13647789;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1">
+       style="opacity:1;fill:#93a7ac;fill-opacity:1;stroke:none;stroke-width:0.17386872;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1">
       <desc
          id="desc5920-8-2-0-3-1-5-7">{&quot;component&quot;:&quot;Entrance.qml&quot;, &quot;map&quot;:&quot;map2&quot;, &quot;location&quot;:&quot;south&quot;}</desc>
     </rect>
