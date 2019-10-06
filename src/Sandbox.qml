@@ -29,8 +29,8 @@ import Clayground.GameController 1.0
 CoordCanvas {
     id: world
     height: parent.height
-    width: height
-    pixelPerUnit: height / world.worldYMax
+    width: parent.width
+    pixelPerUnit: .75 * width / 70
 
     property bool standaloneApp: typeof ClayLiveLoader === 'undefined'
     readonly property string qmlResPrefix: standaloneApp ? "qrc:/" : ""
